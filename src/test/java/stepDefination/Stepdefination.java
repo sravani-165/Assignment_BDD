@@ -80,6 +80,7 @@ public class Stepdefination {
 	public void user_verify_that_Register_is_completed_sucessfull(String registered) {
 	   String message =driver.findElement(By.xpath("//ul[@class='breadcrumb']//following::p[1]")).getText();
 		System.out.println(message.substring(6, 25));
+		
 		assertEquals(message.substring(6, 25), registered);
   }
 
@@ -116,7 +117,7 @@ public class Stepdefination {
   @Then("attach the img and click on send button")
   public void attach_the_img_and_click_on_send_button() {
 	  WebElement chooseFile = driver.findElement(By.name("attach_1"));
-	  chooseFile.sendKeys("C:\\Users\\SravaniJagarlamudi\\Desktop\\pexels-photo-2072165.jpeg");
+	  chooseFile.sendKeys("C:\\Users\\SravaniJagarlamudi\\SDET\\Assignment1\\pexels-photo-2072165.jpeg");
 	  driver.findElement(By.name("compose")).click();
   }
 
